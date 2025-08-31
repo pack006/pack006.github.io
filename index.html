@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentists of Lakeland Hills - Auburn, WA | Family Dentistry</title>
+    <meta name="description" content="Trusted family dentistry in Auburn, WA. Dr. Priya Rabadia provides comprehensive dental care with advanced technology. Schedule your appointment today!">
+    <meta name="author" content="Dentists of Lakeland Hills">
+    
+    <meta property="og:title" content="Dentists of Lakeland Hills - Auburn, WA | Family Dentistry">
+    <meta property="og:description" content="Trusted family dentistry in Auburn, WA. Dr. Priya Rabadia provides comprehensive dental care with advanced technology. Schedule your appointment today!">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: hsl(180, 100%, 35%);
+            --primary-foreground: hsl(0, 0%, 100%);
+            --secondary: hsl(45, 100%, 65%);
+            --secondary-foreground: hsl(210, 6%, 21%);
+            --background: hsl(0, 0%, 100%);
+            --foreground: hsl(210, 6%, 21%);
+            --gray-dark: hsl(210, 6%, 21%);
+            --gray-medium: hsl(210, 4%, 46%);
+            --gray-light: hsl(210, 40%, 96%);
+            --border: hsl(214, 31%, 91%);
+            --radius: 0.5rem;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.5;
+            color: var(--foreground);
+            background-color: var(--background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        .top-bar {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .location, .phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .phone a {
+            color: var(--primary-foreground);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .phone a:hover {
+            text-decoration: underline;
+        }
+
+        .main-header {
+            background-color: var(--background);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-foreground);
+            font-weight: bold;
+            font-size: 1.125rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--foreground);
+        }
+
+        .logo-text p {
+            font-size: 0.875rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: var(--foreground);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .btn-primary:hover {
+            background-color: hsl(180, 100%, 30%);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--secondary-foreground);
+        }
+
+        .btn-secondary:hover {
+            background-color: hsl(45, 100%, 60%);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .btn-lg {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0 6rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            space-y: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--gray-dark);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--gray-medium);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Doctor Profile */
+        .doctor-profile {
+            background-color: var(--gray-light);
+            padding: 4rem 0;
+        }
+
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .doctor-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: block;
+        }
+
+        .doctor-info h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--gray-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .doctor-info p {
+            font-size: 1.125rem;
+            color: var(--gray-medium);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .services h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--gray-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .services-description {
+            font-size: 1.125rem;
+            color: var(--gray-medium);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .office-image {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .office-image img {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-content {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .services h3 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: var(--gray-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .service-card {
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            text-align: center;
+            transition: box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h4 {
+            font-weight: 500;
+            color: var(--gray-dark);
+            font-size: 0.875rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--gray-light);
+            padding: 4rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .map-placeholder {
+            background-color: #d1d5db;
+            border-radius: 1rem;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-medium);
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--gray-dark);
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item a {
+            color: var(--gray-dark);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        .hours-grid {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .insurance-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        /* Icon styles */
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .icon-primary {
+            color: var(--primary);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+            }
+
+            .doctor-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .doctor-info h2 {
+                font-size: 2.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .services h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .nav {
+                display: none;
+            }
+
+            .top-bar-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="location">
+                    <span>📍</span>
+                    <span>7084 Lakeland Hills Way Ste 104, Auburn, WA 98092</span>
+                </div>
+                <div class="phone">
+                    <span>Call</span>
+                    <a href="tel:253-329-5083">253-329-5083</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-icon">D</div>
+                    <div class="logo-text">
+                        <h1>DENTISTS</h1>
+                        <p>OF LAKELAND HILLS</p>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <a href="#team">OUR TEAM</a>
+                    <a href="#services">SERVICES</a>
+                    <a href="#insurance">INSURANCE & PAYMENTS</a>
+                    <a href="#about">ABOUT US</a>
+                </nav>
+
+                <!-- Actions -->
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <a href="#schedule" class="btn btn-secondary">SCHEDULE</a>
+                    <span style="display: none;" class="mobile-menu">☰</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Left Content -->
+                <div class="hero-content">
+                    <h1>We are Dentists of Lakeland Hills</h1>
+                    <p>Trusted by your community, we provide the dental treatment you need for a healthier smile.</p>
+                    <div class="hero-buttons">
+                        <a href="#schedule" class="btn btn-secondary btn-lg">SCHEDULE NOW</a>
+                        <a href="tel:253-329-5083" class="btn btn-outline btn-lg">253-329-5083</a>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=600&fit=crop&crop=face" alt="Happy dental patient with a beautiful smile">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Profile -->
+    <section class="doctor-profile" id="team">
+        <div class="container">
+            <div class="doctor-grid">
+                <!-- Doctor Image -->
+                <div class="doctor-image">
+                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=500&fit=crop&crop=face" alt="Dr. Priya Rabadia">
+                </div>
+
+                <!-- Doctor Info -->
+                <div class="doctor-info">
+                    <h2>Meet Dr. Priya Rabadia</h2>
+                    <p>As your dentist, I will provide comprehensive care to improve the quality of life. I will utilize the latest technology to deliver treatment and care. My goal is to provide a meaningful and comfortable experience filled with a lifetime of smiles.</p>
+                    <a href="#team" class="btn btn-outline">MEET THE TEAM</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-header">
+                <h2>Family Dentistry in Auburn, WA</h2>
+                <p class="services-description">
+                    At Dentists of Lakeland Hills, we prioritize your oral health because we understand its vital role in your overall well-being. Our personalized care and advanced solutions keep your smile healthy, whether you're here for a routine cleaning or advanced procedures like a root canal or a dental bridge.
+                </p>
+            </div>
+
+            <div class="office-image">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=320&fit=crop" alt="Dentists of Lakeland Hills Office">
+            </div>
+
+            <div class="services-content">
+                <h3>We Pride Ourselves on Our Service</h3>
+                <p class="services-description">
+                    When you choose Dentists of Lakeland Hills, you step into a new era of dental excellence with our advanced, proven technology. Explore the advantages of transformative technology, such as Digital X-Rays and CEREC® CAD/CAM single-visit crowns.
+                </p>
+                <a href="#services" class="btn btn-outline" style="margin: 2rem 0;">VIEW ALL SERVICES</a>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card"><h4>EMERGENCY SERVICES</h4></div>
+                <div class="service-card"><h4>CROWNS</h4></div>
+                <div class="service-card"><h4>FILLINGS</h4></div>
+                <div class="service-card"><h4>FLUORIDE TREATMENT</h4></div>
+                <div class="service-card"><h4>TEETH CLEANING</h4></div>
+                <div class="service-card"><h4>IMPLANTS</h4></div>
+                <div class="service-card"><h4>DENTAL SEALANTS</h4></div>
+                <div class="service-card"><h4>MOUTH GUARD</h4></div>
+                <div class="service-card"><h4>ORAL CANCER SCREENING</h4></div>
+                <div class="service-card"><h4>DENTAL X-RAYS</h4></div>
+                <div class="service-card"><h4>PERIODONTICS</h4></div>
+                <div class="service-card"><h4>ROOT CANAL</h4></div>
+                <div class="service-card"><h4>DENTURES</h4></div>
+                <div class="service-card"><h4>VENEERS</h4></div>
+                <div class="service-card"><h4>WHITENING</h4></div>
+                <div class="service-card"><h4>WISDOM TEETH</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Map Placeholder -->
+                <div class="map-placeholder">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📍</div>
+                        <p>Interactive Map</p>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>ADDRESS</h3>
+                        <div class="contact-item">
+                            <span>📞</span>
+                            <a href="tel:253-329-5083">253-329-5083</a>
+                        </div>
+                        <div style="color: var(--gray-medium); margin-bottom: 1rem;">fax: 253-999-5282</div>
+                        <div class="contact-item">
+                            <span>📍</span>
+                            <div>
+                                7084 Lakeland Hills Way<br>
+                                Ste 104<br>
+                                Auburn, WA<br>
+                                98092
+                            </div>
+                        </div>
+                        <a href="#appointment" class="btn btn-secondary" style="width: 100%; margin: 1rem 0;">BOOK APPOINTMENT</a>
+                        <p style="font-size: 0.875rem; color: var(--gray-medium);">
+                            We are located in Lakeland Commons behind Mod Pizza and Stack 571
+                        </p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>🕒 BUSINESS HOURS</h3>
+                        <div class="hours-grid">
+                            <div class="hours-row">
+                                <span>Mon - Fri</span>
+                                <span style="color: var(--gray-medium);">8:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="hours-row">
+                                <span>Sat - Sun</span>
+                                <span style="color: var(--gray-medium);">Closed</span>
+                            </div>
+                        </div>
+                        <div style="padding-top: 1rem; margin-top: 1rem; border-top: 1px solid var(--border); font-size: 0.875rem; color: var(--gray-medium);">
+                            We are open for all dental care procedures, emergency needs and offer nitrous. We speak Spanish, Vietnamese, Hindi and Marathi in office.
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>🌐 INSURANCE</h3>
+                        <p style="color: var(--gray-medium); margin-bottom: 1rem;">We take most major insurances, including:</p>
+                        <div class="insurance-grid">
+                            <div>• Aetna</div>
+                            <div>• Ameritas</div>
+                            <div>• Anthem Blue Cross</div>
+                            <div>• Cigna</div>
+                            <div>• Delta</div>
+                            <div>• Guardian</div>
+                            <div>• MetLife</div>
+                            <div>• United Health Care</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src='https://cdn.jotfor.ms/agent/embedjs/0198ff2938bf702d89c01f9e4a368a4e6f52/embed.js'>
+</script>
+</body>
+</html>
