@@ -1,1 +1,1 @@
-dentist-ai.github.io
+pack006.github.io
